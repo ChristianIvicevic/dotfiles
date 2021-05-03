@@ -1,0 +1,119 @@
+###############################################################################
+# Copyright (c) 2021 Christian Ivicevic
+#
+# This file is part of my personal dotfiles shared via Github:
+# https://github.com/ChristianIvicevic/dotfiles
+#
+# This file is covered by the MIT license described in the LICENSE file in the
+# root of this project.
+###############################################################################
+# Environment properties
+env:
+  # Sets the terminal environment variable in sub-processes correctly.
+  TERM: alacritty
+
+# Window properties
+window:
+  # Startup window dimensions
+  dimensions:
+    columns: 120
+    lines: 35
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
+  # Window title
+  title: Alacritty
+
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: false
+
+# Scrolling behavior
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  history: 100000
+
+  # Scrolling distance multiplier.
+  multiplier: 3
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    family: JetBrainsMono Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    style: Regular
+
+  # Bold font face
+  bold:
+    # Font family
+    family: JetBrainsMono Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold
+
+  # Italic font face
+  italic:
+    # Font family
+    family: JetBrainsMono Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    # Font family
+    family: JetBrainsMono Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold Italic
+
+  # Point size
+  size: 14.0
+
+# Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x1e2127'
+    foreground: '0xabb2bf'
+
+  # Normal colors
+  normal:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'
+
+  # Bright colors
+  bright:
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xffffff'
+
+# Setup the default shell
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
+# Live config reload
+live_config_reload: true
+
+# Key bindings
+key_bindings:
+  - { key: Left,     mods: Alt,     chars: "\x1bb"                       }
+  - { key: Right,    mods: Alt,     chars: "\x1bf"                       }
+  - { key: Left,     mods: Command, chars: "\x1bOH",   mode: AppCursor   } # Home
+  - { key: Right,    mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
