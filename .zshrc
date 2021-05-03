@@ -92,4 +92,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Machine-specific sources
-[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+[[ ! -f $HOME/.zshrc.local ]] || source $HOME/.zshrc.local
