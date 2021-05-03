@@ -57,9 +57,12 @@ else
 fi
 
 # Aliases
+alias zshconfig="vim ~/.zshrc"
 alias vim="nvim"
 alias lg="lazygit"
-alias zshconfig="vim ~/.zshrc"
+alias k="kubectl"
+alias kc="kubectx"
+alias kn="kubens"
 
 # GPG
 if [ -x "$(command -v gpgconf)" ]; then
@@ -87,3 +90,6 @@ fi
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Machine-specific sources
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
