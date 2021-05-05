@@ -13,3 +13,4 @@ ln -sfnv $PWD/.p10k.zsh $HOME
 ln -sfnv $PWD/.tmux.conf $HOME
 ln -sfnv $PWD/.zshrc $HOME
 ln -sfnv $PWD/.config/alacritty $HOME/.config/alacritty
+ln -sfnv $PWD/.config/powerline $HOME/.config/powerline
