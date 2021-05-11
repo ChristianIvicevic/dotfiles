@@ -27,14 +27,6 @@ export PATH=$BREW_PREFIX/bin:$BREW_PREFIX/sbin:$HOME/bin:/usr/local/bin:$PATH
 # Path to oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Always work in a tmux session if tmux is installed
-# https://github.com/chrishunt/dot-files/blob/master/.zshrc
-if which tmux 2>&1 >/dev/null; then
-    if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
-        tmux attach -t main || tmux new -s main; exit
-    fi
-fi
-
 # Remove user/hostname display in the shell by setting the default user.
 DEFAULT_USER=$(whoami)
 
